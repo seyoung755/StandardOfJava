@@ -47,7 +47,7 @@ public class LambdaTest {
 //        inventory.sort(Comparator.comparing(function).reversed());
         List<Apple> inventory = Arrays.asList(new Apple("a", 50), new Apple("b", 50), new Apple("c", 100));
 
-        Comparator<Apple> reversed = Comparator.comparing(a -> a.getWeight());
+        Comparator.comparing((Apple a) -> a.getWeight());
         inventory.sort(Comparator.comparing(Apple::getWeight).reversed());
         //        제네릭 타입을 명시하지 않아 a가 Object 타입으로 간주된다.
 //        inventory.sort(Comparator.comparing(a -> a.getWeight()).reversed());
